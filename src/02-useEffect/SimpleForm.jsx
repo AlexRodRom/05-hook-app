@@ -16,9 +16,22 @@ export const SimpleForm = () => {
         setFormState( { ...formState, [ name ]: value } );
     }
 
+
     useEffect(() => {
-        console.log("useEffect called!");
+        console.log('useEffect Called!');
     }, [])
+
+    useEffect(() => {
+        console.log('formState Changed!');
+    }, [ formState ])
+
+    useEffect(() => {
+        console.log('username Changed!');
+    }, [ username ])
+
+    useEffect(() => {
+        console.log('Email Changed!');
+    }, [ email ])
 
     return (
         <>
