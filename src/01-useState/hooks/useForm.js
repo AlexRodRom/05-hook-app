@@ -6,11 +6,16 @@ export const useForm = ({ initialForm = {} }) => {
 
     const onInputChange = ( { target } ) => {
         const { value, name } = target;
-        setFormState( { ...formState, [ name ]: value } );
+        onCapitalize( { value, name } );
+        //setFormState( { ...formState, [ name ]: value } );
     }
 
     const onResetForm = () => {
         setFormState( initialForm );
+    }
+
+    const onCapitalize = ( { value, name }) => {
+        setFormState( { ...formState,  [name]: value.toUpperCase() } );
     }
   
     return {
