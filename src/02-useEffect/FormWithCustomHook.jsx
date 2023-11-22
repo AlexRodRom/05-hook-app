@@ -19,7 +19,7 @@ export const FormWithCustomHook = () => {
     //     setFormState( { ...formState, [ name ]: value } );
     // }
 
-    const { username, email, password , onInputChange } = useForm({ 
+    const { formState, username, email, password , onInputChange, onResetForm } = useForm({ 
             username: '',
             email: '',
             password: ''
@@ -76,6 +76,8 @@ export const FormWithCustomHook = () => {
                 {
                     (username === 'pos_ponerlo2') && <Message />
                 }
+
+                <button onClick={ onResetForm } className='btn btn-primary mt-2'>Borrar</button>
             </form>
         </>
     )
