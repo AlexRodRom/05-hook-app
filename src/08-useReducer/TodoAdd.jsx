@@ -29,8 +29,8 @@ export const TodoAdd = ({ onNewTodo }) => {
                 done: false 
             }
         );
-        console.log({...newTodo});
-        //onNewTodo({...newTodo});
+        //console.log({...newTodo});
+        onNewTodo({...newTodo});
     }
 
     return (
