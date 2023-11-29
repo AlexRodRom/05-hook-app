@@ -50,7 +50,8 @@ export const useTodos = () => {
         handleNewTodo,
         handleDeleteTodo,
         handleToggleTodo,
-        pendings
+        pendingTodosCount: pendings,
+        todosCount: todos.length
     }
 
 };

@@ -1,15 +1,15 @@
 import { TodoList } from "./todoList";
 import { TodoAdd } from "./TodoAdd";
-import { useTodos } from "../hooks/useTodos";
+import { useTodos } from "../hooks";
 
 export const TodoApp = () => {
 
-    const { todos, handleDeleteTodo, handleToggleTodo, handleNewTodo, pendings } = useTodos();
+    const { todos, handleDeleteTodo, handleToggleTodo, handleNewTodo, todosCount, pendingTodosCount } = useTodos();
 
     return (
 
         <>
-            <div className="d-flex d-flex justify-content-between"><h1>TodoApp ({ todos.length }) </h1><small>Pendientes: ( { pendings } )</small></div>
+            <div className="d-flex d-flex justify-content-between"><h1>TodoApp ({ todosCount }) </h1><small>Pendientes: ( { pendingTodosCount } )</small></div>
             <hr/>
 
             <div className="row">
