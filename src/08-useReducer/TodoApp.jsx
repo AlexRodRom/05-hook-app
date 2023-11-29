@@ -19,7 +19,7 @@ const initialState = [
 export const TodoApp = () => {
 
     
-    const [todos, dispatch ] = useReducer( todoReducer(), initialState )
+    const [todos, dispatch ] = useReducer( todoReducer, initialState )
 
     const handleNewTodo = ( todo ) => {
         const action =  {
