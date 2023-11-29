@@ -9,7 +9,7 @@ export const TodoApp = () => {
     return (
 
         <>
-            <p className="d-flex d-flex justify-content-between"><h1>TodoApp ({ todos.length }) </h1><medium>Pendientes: ( { pendings } )</medium></p>
+            <div className="d-flex d-flex justify-content-between"><h1>TodoApp ({ todos.length }) </h1><small>Pendientes: ( { pendings } )</small></div>
             <hr/>
 
             <div className="row">
