@@ -3,18 +3,7 @@ import { todoReducer } from "./todoReducer";
 import { TodoList } from "./todoList";
 import { TodoAdd } from "./TodoAdd";
 
-const initialState = [
-    // {
-    //     id: new Date().getTime(),
-    //     description: 'Recolectar la piedra del Alma',
-    //     done: false
-    // },
-    // {
-    //     id: new Date().getTime() * 3,
-    //     description: 'Recolectar la piedra del Poder',
-    //     done: false
-    // }
-];
+const initialState = [];
 
 const init = () => {
     return JSON.parse(localStorage.getItem('todos')) || [];
@@ -37,10 +26,16 @@ export const TodoApp = () => {
             type: "[TODO] Add Todo",
             payload: todo
         } 
-
-        console.log( todo );
         dispatch(action);
     }
+
+    const handleDeleteTodo = ( todo ) => {
+        const action =  {
+            type: "[TODO] Delete Todo",
+            payload: todo
+        } 
+        dispatch(action);
+    } 
 
     return (
 
@@ -50,7 +45,7 @@ export const TodoApp = () => {
 
             <div className="row">
                 <div className="col-7">
-                    <TodoList todos={ todos }></TodoList>
+                    <TodoList todos={ todos } onDeleteTodo = { handleDeleteTodo }></TodoList>
                 </div>
                 <div className="col-5">
                     <h4>Agregar TODO</h4>
