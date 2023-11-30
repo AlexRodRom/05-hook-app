@@ -60,8 +60,4 @@ describe('Pruebas en el useCounter', () => {
         expect(result.current.counter).toBe(100);
 
     });
-
-
-
-
 });
