@@ -10,27 +10,27 @@ export const TodoAdd = ({ onNewTodo }) => {
         const { value } = target;
         
         //console.log({...newTodo});
-        setNewTodo( 
-            {
-                ...newTodo,
-                description: value 
-            } 
-        );
+        const newTodoValue = {
+            ...newTodo,
+            description: value 
+        }; 
         //console.log(newTodo);
+        setNewTodo(newTodoValue);
     }
 
     const onSubmit = ( event ) => {
         event.preventDefault();
         //console.log({...newTodo});
-        setNewTodo(
-            {
-                ...newTodo,
-                id: new Date().getTime(), 
-                done: false 
-            }
-        );
+        const newTodoValue = {
+            ...newTodo,
+            id: new Date().getTime(), 
+            done: false 
+        };
+
         //console.log({...newTodo});
-        onNewTodo({...newTodo});
+        setNewTodo(newTodoValue);
+        onNewTodo(newTodoValue);
+
     }
 
     return (

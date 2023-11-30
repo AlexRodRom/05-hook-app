@@ -16,7 +16,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { MainApp } from './09-useContext/mainApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>  
+  <BrowserRouter>
     {/* <React.StrictMode> */}
         <MainApp />
     {/* </React.StrictMode> */}
