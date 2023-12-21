@@ -18,7 +18,7 @@ import { MainApp } from './09-useContext/mainApp';
 ReactDOM.createRoot(document.getElementById('root')).render(
  <BrowserRouter>
     {/* <React.StrictMode> */}
-        <FormWithCustomHook />
+        <MainApp />
     {/* </React.StrictMode> */}
   </BrowserRouter>
 
