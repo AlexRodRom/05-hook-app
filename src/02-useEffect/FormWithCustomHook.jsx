@@ -20,9 +20,9 @@ export const FormWithCustomHook = () => {
     // }
 
     const { formState, username, email, password , onInputChange, onResetForm } = useForm({ 
-            username: '',
-            email: '',
-            password: ''
+            username: 'Alejandro',
+            email: 'Alex',
+            password: '444'
         } 
     );
 
